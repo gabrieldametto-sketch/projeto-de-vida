@@ -1,21 +1,16 @@
-const botao1 = document.getElementById('1');
-const texto1 = document.getElementById('text1');
-const botao2 = document.getElementById('2');
-const texto2 = document.getElementById('text2');
-const botao3 = document.getElementById('3');
-const texto3 = document.getElementById('text3');
-const botao4 = document.getElementById('4');
-const texto4 = document.getElementById('text4');
+const botao = document.querySelector(botao);
+const texto = document.getElementById('texto');
 
-botao1.addEventListener('click', () => {
-    texto.textContent = 'Estudar cursos na alura';
-});
-botao2.addEventListener('click', () => {
-    texto.textContent = 'Criar projetos em Javascript';
-});
-botao3.addEventListener('click', () => {
-    texto.textContent = 'Criar um portfolio';
-});
-botao4.addEventListener('click', () => {
-    texto.textContent = 'Atualizar meu currículo';
+const frases = {
+    '1': 'Estudar cursos na Alura',
+    '2': 'Criar projetos em Javascript',
+    '3': 'Criar um portfolio',
+    '4': 'Atualizar meu currículo'
+}
+
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        // Busca a frase correspondente ao ID ou usa uma mensagem padrão
+        texto.textContent = frases[botao.id] || 'Nenhuma opção selecionada';
+    });
 });
